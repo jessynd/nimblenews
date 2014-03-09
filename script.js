@@ -6,9 +6,8 @@ nn.userSearch = $("input.search").val()
 
 
 
-
 nn.getNews = function(){
-
+	var userSearch = encodeURI(nn.userSearch)
 	$.ajax(nn.buri + "fq=" + nn.userSearch + "&api-key=" + nn.api_key , {
 		dataType: "jsonp",
 		type: "GET",
